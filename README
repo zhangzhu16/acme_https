@@ -28,5 +28,8 @@ vim /opt/fonsview/3RD/grafana/conf/defaults.ini
 
 sh scp2tmp.sh 省的简称 ---> to provice
 
+sudo -i
+cd /tmp
+
 sh tmp_operat.sh 省的简称 ---> 自动化部署
 
