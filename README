@@ -1,0 +1,32 @@
+0. acme.sh 部署
+curl https://get.acme.sh | sh
+
+执行上面命令：
+会把 acme.sh 安装到你的 home 目录下:
+~/.acme.sh/
+
+1. 申请证书
+
+export DP_Id="65521"
+export DP_Key="34369b666aa0511ffeba05c2fbc0ca55"
+
+acme.sh --issue --dns dns_dp -d sd.csk.rhel.cc
+
+2.  本地证书存储路径
+/root/.acme.sh/sd.csk.rhel.cc
+
+3. 上传本地的key到远程服务器的这个目录
+
+/etc/ssl/certs/sd.csk.rhel.cc.cer
+/etc/ssl/certs/sd.csk.rhel.cc.key
+
+4. grafana 配置
+vim /opt/fonsview/3RD/grafana/conf/defaults.ini
+
+1. 启用https 认证
+2. 配置key路径
+
+sh scp2tmp.sh 省的简称 ---> to provice
+
+sh tmp_operat.sh 省的简称 ---> 自动化部署
+
